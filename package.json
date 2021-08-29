@@ -1,6 +1,6 @@
 {
   "name": "mocke",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "license": "MIT",
   "author": "sammwy <sammwy@dotphin.com>",
@@ -8,11 +8,15 @@
     "url": "https://github.com/sammwyy/mocke",
     "type": "git"
   },
+  "bin": {
+    "mocke": "./cli/index.js"
+  },
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "yarn clean && tsc",
     "dev": "cross-env NODE_ENV=development dotenv nodemon",
-    "start": "cross-env NODE_ENV=production dotenv node ./dist"
+    "start": "cross-env NODE_ENV=production dotenv node .",
+    "mocke": "node ./cli"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
