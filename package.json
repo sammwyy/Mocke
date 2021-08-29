@@ -1,9 +1,10 @@
 {
   "name": "mocke",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "./dist/index.js",
   "license": "MIT",
   "author": "sammwy <sammwy@dotphin.com>",
+  "keywords": ["nodejs", "mock", "api", "http", "express", "node", "typescript", "rest", "mock-server", "api-rest"],
   "repository": {
     "url": "https://github.com/sammwyy/mocke",
     "type": "git"
