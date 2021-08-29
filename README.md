@@ -4,7 +4,7 @@ Rest API Mock built in Typescript.
 
 ## Description
 
-Mocke is a Mock that allows you to start a dynamic rest api to test and speed up the development of Frontend applications. Read [docs](https://sammwyy.github.io/mocke) for more information.
+Mocke is a Mock that allows you to start a dynamic rest api to test and speed up the development of Frontend applications. Read [docs](https://sammwyy.github.io/Mocke) for more information.
 
 ## How to use
 
