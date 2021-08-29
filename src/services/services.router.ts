@@ -6,7 +6,7 @@ const services = new ServiceManager();
 
 router.get('/:service', (req: Request, res: Response) => {
   const service = services.getService(req.params['service']);
-  const page = 0 || parseInt(req.query['page'] as string);
+  const page = parseInt(req.query['page'] as string) || 0;
 
   res.status(200).json({
     items: service.findPage(page),
@@ -21,7 +21,7 @@ router.get('/:service/all', (req: Request, res: Response) => {
   });
 });
 
-router.get('/:service/items/:id', (req: Request, res: Response) => {
+router.get('/:service/:id', (req: Request, res: Response) => {
   const service = services.getService(req.params['service']);
 
   const item = service.findByID(req.params['id']);
@@ -37,13 +37,13 @@ router.get('/:service/items/:id', (req: Request, res: Response) => {
   }
 });
 
-router.post('/:service/items', (req: Request, res: Response) => {
+router.post('/:service', (req: Request, res: Response) => {
   const service = services.getService(req.params['service']);
   const item = service.create(req.body);
   res.status(201).json({ item });
 });
 
-router.put('/:service/items/:id', (req: Request, res: Response) => {
+router.put('/:service/:id', (req: Request, res: Response) => {
   const service = services.getService(req.params['service']);
 
   const item = service.update(req.params['id'], req.body);
@@ -57,7 +57,7 @@ router.put('/:service/items/:id', (req: Request, res: Response) => {
   }
 });
 
-router.delete('/:service/items/:id', (req: Request, res: Response) => {
+router.delete('/:service/:id', (req: Request, res: Response) => {
   const service = services.getService(req.params['service']);
 
   const item = service.delete(req.params['id']);
