@@ -10,6 +10,8 @@ app.use(morgan('dev'));
 
 app.use(services);
 
-app.listen(process.env.PORT, () => {
-  console.log('Server listening at ' + process.env.PORT);
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log('Server listening at ' + port);
 });
