@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+h4, h5, h6 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #444;
+}
+
+.color-primary {
+    color: rgb(102, 92, 255);
+}
+
+.container {
+    width: 80%;
+    margin: 100px auto;
+}
