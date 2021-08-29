@@ -7,7 +7,7 @@ body {
 a:visited,
 a:link {
     text-decoration: none;
-    font-weight: bold;
+    color: rgb(102, 92, 255);
 }
 
 h1, h2, h3 {
@@ -21,13 +21,59 @@ h4, h5, h6 {
 p {
     font-size: 18px;
     color: #444;
+    line-height: 2rem;
 }
 
 .color-primary {
     color: rgb(102, 92, 255);
 }
 
+.badge {
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.badge-primary {
+    background-color: rgb(102, 92, 255);
+    color: white;
+}
+
+.badge-success {
+    background-color: rgb(27, 255, 65);
+    color: white;
+}
+
+.badge-warning {
+    background-color: rgb(255, 133, 19);
+    color: white;
+}
+
+.badge-error {
+    background-color: rgb(255, 11, 11);
+    color: white;
+}
+
 .container {
     width: 80%;
     margin: 100px auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .container {
+        width: 96%;
+    }
+}
+
+code {
+    background-color: #333;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 15px;
 }

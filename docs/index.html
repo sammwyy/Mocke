@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,81 @@
     <link rel="stylesheet" href="framework.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Mocke</h1>
-        <p>Mock that allows you to start a dynamic rest api to test and speed up the development of Frontend applications.</p>
+        <h1 class="color-primary">Mocke</h1>
+        <p>Mock that allows you to start a dynamic rest api to test and speed up the development of Frontend
+            applications.<br/>
+            <a href="https://paypal.me/sammwy" target="_blank">Donation</a> - <a href="https://github.com/sammwyy/mocke" target="_blank">GitHub</a> - <a href="https://twitter.com/sammwy" target="_blank">Twitter</a>
+        </p>
+        <hr />
+
+        <h2>Endpoints</h2>
+        <p>The endpoints with which you can do CRUD operations.</p>
+
+        <div class="item">
+            <h3><span class="badge badge-primary">GET</span> /{service}</h3>
+            <p>
+                It allows you to get the items from the first page of the specified service. To specify another page you
+                can use the query <code>page</code> for
+                example <code>http://127.0.0.1:5000/products/?page=2</code>
+            </p>
+        </div>
+
+        <div class="item">
+            <h3><span class="badge badge-primary">GET</span> /{service}/all</h3>
+            <p>
+                It allows you to get all the items (of all the pages) of a service, for example
+                <code>http://127.0.0.1:5000/products/all</code>
+            </p>
+        </div>
+
+        <div class="item">
+            <h3><span class="badge badge-primary">GET</span> /{service}/{id}</h3>
+            <p>
+                It allows you to search by ID for an item of a service. for example
+                <code>http://127.0.0.1:5000/products/1</code>
+            </p>
+        </div>
+
+        <div class="item">
+            <h3><span class="badge badge-success">POST</span> /{service}</h3>
+            <p>
+                It allows you to create an item and store it in a service. The request must have a body in JSON format which will be used to be the content of the item, for example
+                <code>http://127.0.0.1:5000/products</code> with body 
+                <code>
+                {
+                    displayName: "Laptop",
+                    price: 5.00,
+                    colors: ["Black", "White", "Gray"],
+                    isAvailable: true
+                }
+                </code>
+            </p>
+        </div>
+
+        <div class="item">
+            <h3><span class="badge badge-warning">PUT</span> /{service}/{id}</h3>
+            <p>
+                It allows you to search and modify a previously saved item of a service. The request must contain a body in json format with all the fields to change, for example
+                <code>http://127.0.0.1:5000/products</code> with body 
+                <code>
+                {
+                    price: 999.00,
+                    isAvailable: false
+                }
+                </code>
+            </p>
+        </div>
+
+        <div class="item">
+            <h3><span class="badge badge-error">DELETE</span> /{service}/{id}</h3>
+            <p>
+                Allows you to search and remove an item from a service, for example <code>http://127.0.0.1:5000/products/1</code>
+            </p>
+        </div>
     </div>
 </body>
+
 </html>

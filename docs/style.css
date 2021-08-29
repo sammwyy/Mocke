@@ -1,0 +1,26 @@
+.item {
+    margin-bottom: 50px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+}
+
+.item:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.item:hover > h3 {
+    color: #ddd;
+}
+
+.item:hover > p {
+    color: #aaa;
+}
+
+.item:hover > p > code {
+    background-color: #eee;
+    color: #333;
+}
