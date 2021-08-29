@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "main": "./dist/index.js",
   "license": "MIT",
+  "author": "sammwy <sammwy@dotphin.com>",
+  "repository": {
+    "url": "https://github.com/sammwyy/mocke",
+    "type": "git"
+  },
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "yarn clean && tsc",
